@@ -4,11 +4,9 @@ setTimeout(() => {
 
     let quotes = [];
     if (localStorage.getItem('quotes')) {
+        quotes = [];
         quotes = JSON.parse(localStorage.getItem('quotes'));
-    } else {
-        localStorage.setItem('quotes', JSON.stringify(quotes));
-        quotes = JSON.parse(localStorage.getItem('quotes'));
-    }
+    } else {}
 
     quotes.forEach(quote => {
         getQuotes(quote);
@@ -50,7 +48,8 @@ setTimeout(() => {
         quoteContainer.appendChild(newQuoteElementDiv);
 
         quotes.push(newQuote);
-
+        
+        localStorage.clear();
         localStorage.setItem('quotes', JSON.stringify(quotes));
         console.log(quotes);
 
