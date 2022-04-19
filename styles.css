@@ -1,0 +1,105 @@
+@font-face {
+    font-family: Sofia;
+    src: url('fonts/Sofia.otf');
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('fonts/Montserrat.ttf');
+}
+
+body {
+    background-color: rgb(80, 78, 74);
+    text-align: center;
+}
+
+.bar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.bar a {
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-shadow: rgb(11, 11, 11) 0px 3px 0px;
+    font-size: 30px;
+    font-family: Sofia;
+}
+
+#quoteContainer {
+    display: block;
+    margin: auto;
+    width: 500px;
+    height: 200px;
+    padding: 10px;
+    background-color: rgb(95, 95, 95);
+    overflow-y: scroll;
+}
+
+#quoteContainer::-webkit-scrollbar {
+    display: none;
+}
+
+h2 {
+    font-family: Pacifico;
+    font-size: 30px;
+    color: #f6d4d4;
+    text-shadow: #333 0px 4px 0px;
+}
+
+p {
+    font-family: Montserrat;
+    font-size: 20px;
+    color: #f6d4d4;
+    text-shadow: rgba(51, 51, 51, 0.293) 0px 3px 0px;
+}
+
+input {
+    font-family: Montserrat;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    width: 200px;
+    height: 30px;
+    background-color: #f6d4d4;
+    color: rgb(72, 72, 72);
+    text-shadow: #333
+}
+
+button {
+    background-color: #f6d4d4;
+    border: none;
+    outline: none;
+    color: rgb(72, 72, 72);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: Montserrat;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #ffcccc;
+}
+
+#delete {
+    background-color: #f6d4d4;
+    border: none;
+    outline: none;
+    color: rgb(72, 72, 72);
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: Montserrat;
+    transition: background-color 0.2s;
+}
+
+#delete:hover {
+    background-color: #ffcccc;
+}
