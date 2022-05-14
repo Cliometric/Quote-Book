@@ -6,7 +6,20 @@ setTimeout(() => {
     if (localStorage.getItem('quotes')) {
         quotes = [];
         quotes = JSON.parse(localStorage.getItem('quotes'));
-    } else {}
+    } else {
+        localStorage.setItem("quotes", "[]");
+    }
+
+    function containsObject(obj, list) {
+        var i;
+        for (i = 0; i < list.length; i++) {
+            if (list[i] === obj) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 
     quotes.forEach(quote => {
         getQuotes(quote);
@@ -47,12 +60,14 @@ setTimeout(() => {
 
         quoteContainer.appendChild(newQuoteElementDiv);
 
-        quotes.push(newQuote);
-        
+        if (quotes.indexOf(newQuote) == -1) {
+            quotes.push(newQuote);
+        }
+        console.log(quotes)
+
+
         localStorage.clear();
         localStorage.setItem('quotes', JSON.stringify(quotes));
-        console.log(quotes);
-
         function deleteQuote() {
             newQuoteElementDelete.innerText = 'Are you sure?';
             newQuoteElementDelete.addEventListener('click', confirmDelete);
